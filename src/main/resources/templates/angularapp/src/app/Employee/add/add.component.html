@@ -1,0 +1,31 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>Add Employee</h3>
+        </div>
+
+        <div classs="card-body">
+            <form action="">
+                <div class="form-group">
+
+
+                        <label for=""> Name</label>             
+                        <input #name type="text" class="form-control" ng-change="validate(name.value)" minlength="3" maxlength="16">
+                           
+                        <label for=""> Surname</label>
+                        <input #surname type="text" class="form-control" ng-change="validate(surname.value)" minlength="2" maxlength="16">
+
+                        <label for=""> Password</label> 
+                        <input #password type="password" class="form-control" ng-change="validatePassword(name.value)" minlength="8" maxlength="16">
+                        
+
+                        <button (click)=" add(name.value, surname.value , password.value)" class="btn btn-success">Add</button>
+                        
+                        <button (click)=" cancel()" class="btn btn-danger " style="margin:30px" >Cancel</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
